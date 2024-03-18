@@ -1,32 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"  href="index.css">
-    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>DunDev</title>
 </head>
 <body>
   
       <nav>
         <ul class="sidebar">
         <li onclick="hideSideBar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">Login</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">Feedback</a></li>
             
         </ul>
-        <ul >
+        <ul class="main-bar" >
             <li class="logo"><a href="#">Dun<span>Dev</span></a></li>
-            <li class="hide-li"><a href="#">Home</a></li>
+            <li class="hide-li"><a href="index.html">Home</a></li>
             <li class="hide-li"><a href="#">Login</a></li>
             <li class="hide-li"><a href="#">About</a></li>
             <li class="hide-li"><a href="#">Contact</a></li>
             <li class="hide-li"><a href="#">Feedback</a></li>
-            <li class="menu-bar"  onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            <li class="menu-bar" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24"  viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
             
         </ul>
       </nav>
+
+      <section class="home">
+        <div class="home-content">
+            <h1>Hi,I'm Duncan</h1>
+        <h2>Frontend Developer</h2>
+        <p>My expertise lies in creating visually stunning layouts, implementing elegant animations, and optimizing performance for seamless user interaction. Committed to staying at the forefront of web development trends, I am dedicated to continuous learning and refining my skills to deliver innovative solutions that captivate and inspire
+
+        </p>
+        <div class="btn-cont">
+            <a href="#"><button class="hire-btn">Hire Me</button></a>
+            <a href="#"><button class="talk-btn">Let's Talk</button></a>
+            
+        
+        </div>
+        </div>
+      </section>
+      
+      <div class="socio-btn">
+        <button><a href="#"><i class='bx bxl-twitter'></i></a></button>
+        <button><a href="#"><i class='bx bxl-facebook'></i></a></button>
+        <button><a href="#"><i class='bx bxl-linkedin-square'></i></a></button>
+      </div>
     
    <script>
     function showSidebar(){
@@ -41,7 +65,6 @@
         
 
     }
-
    </script>
 </body>
 </html>

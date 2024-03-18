@@ -6,19 +6,42 @@
 body{
     
     box-sizing: border-box;
-    font-family: Helvetica, Arial, Georgia, Tahoma , Roboto;
-    background-image:url(images/christopher-gower-m_HRfLhgABo-unsplash.jpg) ;
+    font-family: poppins;
+    background: linear-gradient(135deg,#25093f, #000000);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
+   
+    
 }
 
+.logo {
+    color: rgba(19, 19, 18, 0.678);
+    font-weight: bold;
+    font-size: 25px;
+}
 
+.logo a:hover{
+    background-color: none;
+}
+span{
+
+    color: rgb(221, 83, 210);
+}
 nav{
-    background-color: white;
+
     margin-top: 0;
+    position: fixed;
+    right: 0;
+    left: 0;
     
+    
+}
+
+.main-bar{
+    
+   background: transparent;
     
 }
 
@@ -37,20 +60,20 @@ nav ul li{
 
 nav ul li a{
     text-decoration: none;
-    color: black;
+    color: rgb(253, 251, 251);
     transition: .3s;
     height: 100%;
     display: flex;
     align-items: center;
     padding: 0 30px;
-   
+   transition: .4s;
     
 }
 
 nav ul li a:hover {
 
-    color:rgb(63, 61, 65) ;
-    background-color: #f0f0f0;
+    color: #00abf0 ;
+   
     
 }
 
@@ -68,12 +91,13 @@ nav li:first-child{
     height: 100vh;
     width: 250px;
     z-index: 999;
-    background-color: rgba(255, 255, 255, 0.034);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(100px);
+  
     display: none;
     flex-direction: column;
     align-items: start;
     justify-content: start;
+    
 
     
 
@@ -99,11 +123,107 @@ nav li:first-child{
     .menu-bar{
         display: block;
     }
+    .main-bar{
+        background-color: rgb(55, 57, 59);
+    }
    
 }
 
-@media(max-width:400px){
+@media(max-width:460px){
     .sidebar{
         width: 100%;
-    }
+        display: flex;
+        gap: 20px;
+    
+    
 }
+}
+.home{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding-left: 50px;
+
+}
+
+.home-content{
+    max-width: 500px;
+    
+}
+
+.home-content h1 {
+    font-size: 50px;
+    color: white;
+    margin-bottom: 0;
+}
+
+.home-content h2{
+    margin-top:0 ;
+    font-size: 25px;
+    color:#00abf0 ;
+}
+
+.home-content p{
+    color: white;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.btn-cont{
+    width: 345px;
+    height: 50px;
+}
+.hire-btn, .talk-btn{
+    background: transparent;
+    width: 90px;
+    height:30px;
+    color:#00abf0 ;
+    border:1px solid #00abf0;
+    border-radius: 5px;
+    margin: 10px 10px;
+    transition: .4s;
+    
+    
+}
+
+.hire-btn:hover,.talk-btn:hover {
+    background-color: #00abf0;
+    color:#080808;
+    }
+
+
+    
+    
+    .socio-btn{
+        position: fixed;
+        left: 50px;
+        bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .socio-btn button{
+        width: 30px;
+        height: 30px;
+        border: 1px solid #00abf0;
+        border-radius: 15px;
+        background-color: transparent;
+        transition: .4s;
+       
+    } 
+
+    .socio-btn button a{
+        color: #00abf0;
+    }
+
+    .socio-btn button:hover{
+        background-color: #00abf0;
+       
+    }
+    .socio-btn button a:hover{
+        color: #080808;
+    }
