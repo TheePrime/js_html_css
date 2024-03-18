@@ -5,12 +5,10 @@
     <title>Document</title>
 </head>
 <body>
-    <header >
+  
       <nav>
-        <div class="logo">
-            <p>Dun<span>Dev</span></p>
-        </div>
-        <ul >
+        <ul class="sidebar">
+        <li onclick="hideSideBar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
             <li><a href="#">Home</a></li>
             <li><a href="#">Login</a></li>
             <li><a href="#">About</a></li>
@@ -18,7 +16,32 @@
             <li><a href="#">Feedback</a></li>
             
         </ul>
+        <ul >
+            <li class="logo"><a href="#">Dun<span>Dev</span></a></li>
+            <li class="hide-li"><a href="#">Home</a></li>
+            <li class="hide-li"><a href="#">Login</a></li>
+            <li class="hide-li"><a href="#">About</a></li>
+            <li class="hide-li"><a href="#">Contact</a></li>
+            <li class="hide-li"><a href="#">Feedback</a></li>
+            <li class="menu-bar"  onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            
+        </ul>
       </nav>
-    </header>
+    
+   <script>
+    function showSidebar(){
+        const sideBar = document.querySelector('.sidebar')
+        sideBar.style.display = "flex"
+        
+    }
+
+    function hideSideBar(){
+        const sideBar = document.querySelector('.sidebar')
+        sideBar.style.display = "none"
+        
+
+    }
+
+   </script>
 </body>
 </html>
