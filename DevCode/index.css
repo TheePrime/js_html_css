@@ -11,7 +11,7 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    min-height: 1000px;
    
     
 }
@@ -132,7 +132,7 @@ nav li:first-child{
 @media(max-width:460px){
     .sidebar{
         width: 100%;
-        display: flex;
+        display:none;
         gap: 20px;
     
     
@@ -142,7 +142,7 @@ nav li:first-child{
     display: flex;
     align-items: center;
     height: 100vh;
-    padding-left: 50px;
+    padding:0px 16px;
 
 }
 
