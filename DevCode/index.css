@@ -7,11 +7,12 @@ body{
     
     box-sizing: border-box;
     font-family: poppins;
-    background: linear-gradient(135deg,#25093f, #000000);
+    background: linear-gradient(135deg,#2e2d2e, #000000);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 1000px;
+    min-height: 100vh;
+    overflow: auto;
    
     
 }
@@ -115,34 +116,11 @@ nav li:first-child{
     display: none;
 }
 
-
-@media(max-width: 800px){
-    .hide-li{
-        display: none;
-    }
-    .menu-bar{
-        display: block;
-    }
-    .main-bar{
-        background-color: rgb(55, 57, 59);
-    }
-   
-}
-
-@media(max-width:460px){
-    .sidebar{
-        width: 100%;
-        display:none;
-        gap: 20px;
-    
-    
-}
-}
 .home{
     display: flex;
     align-items: center;
     height: 100vh;
-    padding:0px 16px;
+    padding:0px 50px;
 
 }
 
@@ -227,3 +205,33 @@ nav li:first-child{
     .socio-btn button a:hover{
         color: #080808;
     }
+
+
+
+@media(max-width: 800px){
+    .hide-li{
+        display: none;
+    }
+    .menu-bar{
+        display: block;
+    }
+    .main-bar{
+        background-color: rgb(55, 57, 59);
+    }
+   .home{
+    padding: 0px 16px;
+   }
+   .home-content{
+
+   }
+}
+
+@media(max-width:460px){
+    .sidebar{
+        width: 100%;
+        display:none;
+        gap: 20px;
+    
+    
+}
+}
