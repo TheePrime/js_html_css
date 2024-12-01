@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button
+      onclick="
+        flipCoin('heads')
+        "
+    >
+      heads
+    </button>
+    <button
+      onclick="
+        flipCoin('tails')
+    "
+    >
+      tails
+    </button>
+
+    <button onclick="
+    score.wins= 0;
+    score.losses= 0;
+
+    localStorage.removeItem('score')
+    "
+    >Reset</button>
+    <input class="input" onkeyup="
+    inputKeyDown()
+    ">
+    <p class="output"></p>
+
+    <script>
+
+        let score= JSON.parse(localStorage.getItem('score'))|| {
+            wins:0,
+            losses:0,
+        }
+
+
+          function inputKeyDown(){
+            const inputElement = document.querySelector('.input')
+            document.querySelector('.output').innerHTML = inputElement.value
+  
+          }
+      function flipCoin(guess) {
+        
+        
+        let  result = "";
+        
+
+        let computerPick = computerMove();
+       
+
+        if (guess === "heads") {
+          if (computerPick === "heads") {
+            result = "You win";
+          } else if (computerPick === "tails") {
+            result = "You lose";
+          }
+        } else {
+          if (computerPick === "heads") {
+            result = "You lose";
+          } else if (computerPick === "tails") {
+            result = "You win";
+          }
+        }
+
+
+        if (result === 'You win'){
+            score.wins +=1;
+        }else if(result ==='You lose'){
+            score.losses +=1 
+        }
+
+        console.log(localStorage.setItem('score', JSON.stringify(score)))
+
+        alert(`You picked ${guess}.Coin flipped ${computerPick}.${result}
+wins: ${score.wins}, losses: ${score.losses}`);
+      }
+
+      function computerMove() {
+        const randomNumber = Math.random();
+
+        let computerPick=''
+
+          if (randomNumber < 0.5) {
+            computerPick = "heads";
+          } else {
+            computerPick = "tails";
+          }
+
+          return computerPick
+        }
+
+
+      /* const objectAmazon = {
+            name: 'Basketball',
+            price: 2095
+        }
+        objectAmazon.price = 2595;
+        objectAmazon['delivery-time']= '3 days'
+    console.log(objectAmazon);
+    */
+      /*const bag ={
+            name: 'Bag',
+            price: 799
+        }
+
+        const shoes ={
+            name: 'shoes',
+            price: 699
+        }
+
+     function comparePrice(product1,product2){
+        let cheap=''
+
+        if (product1.price < product2.price){
+            cheap = product1
+        }else if(product2.price<product1.price){
+            cheap = product2
+        }
+        return cheap
+     }
+
+     console.log(comparePrice(shoes,bag));
+     */
+
+      /* function isSameProduct(product1,product2){
+        return(
+            product1.name === product2.name && product1.price === product2.price
+        )
+    }
+
+    const bag ={
+            name: 'Bag',
+            price: 799
+        }
+
+        const shoes ={
+            name: 'shoes',
+            price: 699
+        }
+
+        console.log(isSameProduct(bag,shoes));
+
+        console.log("Good Morning".repeat(5));
+        */
+    </script>
+  </body>
+</html>
